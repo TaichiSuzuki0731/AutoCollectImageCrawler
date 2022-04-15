@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  my-python:
+    build: ./
+    container_name: my-python
+    command: tail -f /dev/null
+    working_dir: /root/app/
+    volumes:
+      - ./:/root/app/
+    environment:
+      - TZ=Asia/Tokyo
